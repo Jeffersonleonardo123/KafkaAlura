@@ -25,6 +25,7 @@ public class SendMsgMain {
         var emailRecord = new ProducerRecord<>("ECOMMERCE_SEND_EMAIL", email, email);
         producer.send(record, callback).get();
         producer.send(emailRecord, callback).get();
+
     }
 
     private static Properties properties(){
